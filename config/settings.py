@@ -21,6 +21,7 @@ DJANGO_APPS = [
 
 LOCAL_APPS = [
     "users.apps.UsersConfig",
+    "reports.apps.ReportsConfig",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
