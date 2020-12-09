@@ -96,6 +96,8 @@ STATIC_URL = "/static/"
 
 AUTH_USER_MODEL = "users.User"
 
+CONN_MAX_AGE = 60
+
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 100,

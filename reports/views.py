@@ -1,4 +1,7 @@
 from django.db.models import Q
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
+from django.views.decorators.vary import vary_on_cookie
 from rest_framework.viewsets import ModelViewSet
 
 from .models import Report
@@ -11,6 +14,11 @@ class ReportViewSet(ModelViewSet):
     http_method_names = [
         "get",
     ]
+
+    @method_decorator(cache_page(60 * 60 * 2))
+    @method_decorator(vary_on_cookie)
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
 
     def get_queryset(self):
         queryset = Report.objects.all()
