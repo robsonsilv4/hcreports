@@ -2,10 +2,15 @@ from django.db.models import Q
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
 from django.views.decorators.vary import vary_on_cookie
+from django.views.generic import TemplateView
 from rest_framework.viewsets import ModelViewSet
 
 from .models import Report
 from .serializers import ReportSerializer
+
+
+class Index(TemplateView):
+    template_name = "reports/index.html"
 
 
 class ReportViewSet(ModelViewSet):

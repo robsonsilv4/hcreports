@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+<!-- index -->
+
+{% block content %}
+<div class="columns mt-3">
+  <div class="column is-3">
+    <aside class="">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">Users</p>
+        </header>
+        <div class="card-content">
+          <ul>
+            <label class="checkbox">
+              <input type="checkbox" class="mr-1" />
+              User
+            </label>
+          </ul>
+          <ul>
+            <label class="checkbox">
+              <input type="checkbox" class="mr-1" />
+              User
+            </label>
+          </ul>
+          <ul>
+            <label class="checkbox">
+              <input type="checkbox" class="mr-1" />
+              User
+            </label>
+          </ul>
+        </div>
+      </div>
+
+      <p class="is-size-7 mt-2">Filter reports for a specific user.</p>
+    </aside>
+  </div>
+
+  <div class="column is-9">
+    <section class="hero is-primary is-small mb-4 is-hidden-mobile">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Report List</h1>
+          <h2 class="subtitle">List of Reports and Report Responses</h2>
+        </div>
+      </div>
+    </section>
+
+    <div class="card">
+      <div class="card-content">
+        <div class="table-container">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Message</th>
+                <th>Author</th>
+                <th>Supervisors</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Size major spend few security between agency.</td>
+                <td>Dennis Johnson</td>
+                <td>Debra Howard</td>
+              </tr>
+              <tr>
+                <td>Size major spend few security between agency.</td>
+                <td>Dennis Johnson</td>
+                <td>Debra Howard</td>
+              </tr>
+              <tr>
+                <td>Size major spend few security between agency.</td>
+                <td>Dennis Johnson</td>
+                <td>Debra Howard</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
