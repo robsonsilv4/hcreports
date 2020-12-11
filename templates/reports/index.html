@@ -10,27 +10,15 @@
 <div ng-app="app" class="columns mt-3">
   <div class="column is-3">
     <aside class="">
-      <div class="card">
+      <div ng-controller="UsersController" class="card">
         <header class="card-header">
           <p class="card-header-title">Users</p>
         </header>
-        <div class="card-content">
+        <div class="card-content" ng-repeat="user in users">
           <ul>
             <label class="checkbox">
-              <input type="checkbox" class="mr-1" />
-              User
-            </label>
-          </ul>
-          <ul>
-            <label class="checkbox">
-              <input type="checkbox" class="mr-1" />
-              User
-            </label>
-          </ul>
-          <ul>
-            <label class="checkbox">
-              <input type="checkbox" class="mr-1" />
-              User
+              <input type="checkbox" ng-model="user" class="mr-1" />
+              [[user.first_name]] [[user.last_name]]
             </label>
           </ul>
         </div>
@@ -87,4 +75,5 @@
 {{ block.super }}
 <script src="{% static 'app.js' %}"></script>
 <script src="{% static 'src/controllers/reportController.js' %}"></script>
+<script src="{% static 'src/controllers/usersController.js' %}"></script>
 {% endblock %}
