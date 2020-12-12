@@ -52,7 +52,9 @@
             <tbody ng-repeat="report in reports">
               <tr>
                 <td>
-                  <a class="modal-button" ng-click="toggleModal()"
+                  <a
+                    class="modal-button"
+                    ng-click="toggleModal(report.responses)"
                     >[[report.message]]</a
                   >
                 </td>
@@ -76,22 +78,17 @@
               <tr>
                 <th>Message</th>
                 <th>Author</th>
+                <th>Email</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody ng-repeat="response in reportResponses">
+              <p>[[response]]</p>
               <tr>
-                <td>[[reports[0].responses[0].message]]</td>
+                <td>[[response.message]]</td>
                 <td>
-                  [[reports[0].responses[0].author.first_name]]
-                  [[reports[0].responses[0].author.last_name]]
+                  [[response.author.first_name]] [[response.author.last_name]]
                 </td>
-              </tr>
-              <tr>
-                <td>[[reports[0].responses[1].message]]</td>
-                <td>
-                  [[reports[0].responses[1].author.first_name]]
-                  [[reports[0].responses[1].author.last_name]]
-                </td>
+                <td>[[response.author.email]]</td>
               </tr>
             </tbody>
           </table>

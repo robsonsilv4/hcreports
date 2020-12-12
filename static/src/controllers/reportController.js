@@ -4,9 +4,11 @@
     .module('app')
     .controller('ReportController', function ($scope, $rootScope, $http) {
       $scope.showModal = false;
+      $scope.reportResponses = [];
 
-      $scope.toggleModal = function () {
-        console.log($scope.showModal);
+      $scope.toggleModal = function (reportResponses) {
+        console.log(reportResponses);
+        $scope.reportResponses = reportResponses;
         $scope.showModal = !$scope.showModal;
       };
 
