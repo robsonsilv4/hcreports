@@ -14,13 +14,18 @@
         <header class="card-header">
           <p class="card-header-title">Users</p>
         </header>
-        <div class="card-content" ng-repeat="user in users">
-          <ul>
-            <label class="checkbox">
-              <input type="checkbox" class="mr-1" />
-              [[user.first_name]] [[user.last_name]]
-            </label>
-          </ul>
+        <div class="card-content">
+          <div class="select is-multiple is-fullwidth">
+            <select
+              multiple
+              ng-model="selectedUser"
+              ng-change="selectUser(selectedUser)"
+            >
+              <option ng-repeat="user in users" value="[[user]]">
+                [[user.first_name]] [[user.last_name]]
+              </option>
+            </select>
+          </div>
         </div>
       </div>
 
