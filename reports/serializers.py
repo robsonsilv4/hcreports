@@ -1,11 +1,21 @@
+from django.contrib.auth import get_user_model
 from rest_framework.serializers import ModelSerializer
-from users.serializers import UserSerializer
 
 from .models import Report, ReportResponse
 
 
+class UserReportSerializer(ModelSerializer):
+    class Meta:
+        model = get_user_model()
+        fields = [
+            "first_name",
+            "last_name",
+            "email",
+        ]
+
+
 class ReportResponseSerializer(ModelSerializer):
-    author = UserSerializer(read_only=True)
+    author = UserReportSerializer(read_only=True)
 
     class Meta:
         model = ReportResponse
@@ -16,8 +26,8 @@ class ReportResponseSerializer(ModelSerializer):
 
 
 class ReportSerializer(ModelSerializer):
-    author = UserSerializer(read_only=True)
-    supervisors = UserSerializer(read_only=True, many=True)
+    author = UserReportSerializer(read_only=True)
+    supervisors = UserReportSerializer(read_only=True, many=True)
     responses = ReportResponseSerializer(read_only=True, many=True)
 
     class Meta:
