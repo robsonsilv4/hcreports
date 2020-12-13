@@ -7,6 +7,19 @@ A simple reports management application build for Heavy Connect challenge.
 | ![Home](./screenshots/screenshot_01.png) | ![User filter](./screenshots/screenshot_02.png) | ![Mobile](./screenshots/screenshot_03.png) |
 |                                          |                                                 |                                            |
 
+## Used in the Project
+
+- [Pipenv](https://github.com/pypa/pipenv)
+- [Django](https://github.com/django/django)
+- [Django REST Framework](https://github.com/encode/django-rest-framework)
+- [Black](https://github.com/psf/black)
+- [Flake8](https://github.com/PyCQA/flake8)
+- [Python DotENV](https://github.com/theskumar/python-dotenv)
+- [Bulma](https://github.com/jgthms/bulma)
+- [AngularJS](https://github.com/angular/angular.js/)
+- [WhiteNoise](https://github.com/evansd/whitenoise)
+- [Django Compressor](https://github.com/django-compressor/django-compressor)
+
 ## Getting Started
 
 Create a virtual environment and install the dependencies:
@@ -149,6 +162,14 @@ That will returns:
 ## Style
 
 This project use [Black](https://github.com/psf/black) for code style and a commit style inspired in _Semantic Commit Messages_.
+
+## Todo
+
+- [ ] Add _/api_ prefix.
+- [ ] Add loading directive.
+- [ ] Add offline support.
+- [ ] Add frontend error handling.
+- [ ] Add separate frontend branch.
 
 ## License
 
