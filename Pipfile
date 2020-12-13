@@ -9,6 +9,8 @@ djangorestframework = "*"
 python-dotenv = "*"
 factory-boy = "*"
 django-cors-headers = "*"
+whitenoise = "*"
+brotli = "*"
 
 [dev-packages]
 black = "*"
