@@ -11,14 +11,19 @@ A simple reports management application build for Heavy Connect challenge.
 
 ## Getting Started
 
-Install the dependencies (needed [Pipenv](https://github.com/pypa/pipenv)):
+Create a virtual environment and install the dependencies:
 
 ```sh
-pipenv install
+pipenv install # recommended
+pipenv shell
 
+# or
+
+python -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt
 ```
-
-Optionally use _pipenv shell_ or _pipenv run_.
 
 Initialize the database and load the fixtures:
 
