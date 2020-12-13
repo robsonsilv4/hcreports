@@ -26,6 +26,12 @@
               </option>
             </select>
           </div>
+          <button
+            class="button is-danger is-small mt-2"
+            ng-click="clearSelection()"
+          >
+            Clear selection
+          </button>
         </div>
       </div>
     </aside>
@@ -85,7 +91,6 @@
               </tr>
             </thead>
             <tbody ng-repeat="response in reportResponses">
-              <p>[[response]]</p>
               <tr>
                 <td>[[response.message]]</td>
                 <td>

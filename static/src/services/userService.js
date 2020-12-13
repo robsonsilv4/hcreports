@@ -19,9 +19,15 @@
       localStorage.setItem('currentUser', user);
     }
 
+    function clear() {
+      user = '';
+      localStorage.removeItem('currentUser');
+    }
+
     return {
       getUser: getUser,
       setUser: setUser,
+      clear: clear,
     };
   });
 })();

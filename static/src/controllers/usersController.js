@@ -17,6 +17,11 @@
           $scope.selectedUser = selectedUser;
           UserService.setUser(selectedUser);
         };
+
+        $scope.clearSelection = function () {
+          $scope.selectedUser = '';
+          UserService.clear();
+        };
       }
     );
 })();
