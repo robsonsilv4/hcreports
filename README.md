@@ -146,6 +146,10 @@ That will returns:
 }
 ```
 
+## Style
+
+This project use [Black](https://github.com/psf/black) for code style and a commit style inspired in _Semantic Commit Messages_.
+
 ## License
 
 This project in under the MIT License. See [LICENSE](./LICENSE) for more information.
