@@ -12,7 +12,7 @@
     <aside class="">
       <div ng-controller="UsersController" class="card">
         <header class="card-header">
-          <p class="card-header-title">Users</p>
+          <p class="card-header-title">Filter Reports by User</p>
         </header>
         <div class="card-content">
           <div class="select is-multiple is-fullwidth">
@@ -21,15 +21,13 @@
               ng-model="selectedUser"
               ng-change="selectUser(selectedUser)"
             >
-              <option ng-repeat="user in users" value="[[user]]">
+              <option ng-repeat="user in users" value="[[user.id]]">
                 [[user.first_name]] [[user.last_name]]
               </option>
             </select>
           </div>
         </div>
       </div>
-
-      <p class="is-size-7 mt-2">Filter reports for a specific user.</p>
     </aside>
   </div>
 

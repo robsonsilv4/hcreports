@@ -15,7 +15,7 @@
 
         $scope.selectUser = function (selectedUser) {
           $scope.selectedUser = selectedUser;
-          UserService.setCurrentUser(selectedUser);
+          UserService.setUser(selectedUser);
         };
       }
     );

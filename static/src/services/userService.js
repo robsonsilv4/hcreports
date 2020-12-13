@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('app').factory('UserService', function () {
-    var user = {};
+    var user = '';
 
     function getUser() {
       var currentUser = localStorage.getItem('currentUser');
