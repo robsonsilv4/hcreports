@@ -36,6 +36,15 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Create a copy of .env and edit the informations:
+
+```sh
+cp env.example .env
+
+# optionaly
+nano .env
+```
+
 Initialize the database and load the fixtures:
 
 ```sh
