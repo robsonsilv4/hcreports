@@ -15,6 +15,7 @@ A simple reports management application build for Heavy Connect challenge.
 - [Black](https://github.com/psf/black)
 - [Flake8](https://github.com/PyCQA/flake8)
 - [Python DotENV](https://github.com/theskumar/python-dotenv)
+- [Faker Boy](https://github.com/FactoryBoy/factory_boy)
 - [Bulma](https://github.com/jgthms/bulma)
 - [AngularJS](https://github.com/angular/angular.js/)
 - [WhiteNoise](https://github.com/evansd/whitenoise)
@@ -171,6 +172,10 @@ That will returns:
 ## Style
 
 This project use [Black](https://github.com/psf/black) for code style and a commit style inspired in _Semantic Commit Messages_.
+
+## Inspiration
+
+The screens was developed based on mockups created for the challenge and can be found in _documents_ folder.
 
 ## Todo
 
